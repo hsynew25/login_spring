@@ -7,6 +7,13 @@
 		<result column="user_name" property="userName" />
 	</resultMap>
 
+	<resultMap type="UserInfoVO" id="UserList">
+		<result column="user_id" property="userId" />
+		<result column="user_name" property="userName" />
+		<result column="pos_num" property="posNum" />
+		<result column="phone_num" property="phone" />
+	</resultMap>
+
 	<select id="Login" parameterType="LoginVO" resultType="int">
 		SELECT
 		COUNT(*)
@@ -22,5 +29,16 @@
 		FROM user
 		WHERE
 		user_id = #{userId}
+	</select>
+
+	<select id="GetUserList" resultMap="UserList">
+		SELECT user.user_id
+				,a.user_name
+				,position
+				,pos_num
+				,email
+				,phone_num
+				,age
+		FROM user a;
 	</select>
 </mapper>

@@ -6,5 +6,6 @@
 	<typeAliases>
 		<typeAlias alias="LoginVO" type="kr.co.ensglobal.VO.LoginVO" />
 		<typeAlias alias="UserVO" type="kr.co.ensglobal.VO.UserVO" />
+		<typeAlias alias="UserInfoVO" type="kr.co.ensglobal.VO.UserInfoVO" />
 	</typeAliases>
 </configuration>

@@ -26,8 +26,8 @@
 			value="com.mysql.cj.jdbc.Driver"></property>
 		<property name="jdbcUrl"
 			value="jdbc:mysql://127.0.0.1:3306/firstdb?allowPublicKeyRetrieval=true&amp;useSSL=false&amp;serverTimezone=UTC" />
-		<property name="username" value="firstuser"></property>
-		<property name="password" value="first123!@#"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="5131"></property>
 	</bean>
 
 	<!-- 커넥션폴 설정 -->

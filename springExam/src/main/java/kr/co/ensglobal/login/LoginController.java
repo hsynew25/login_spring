@@ -25,7 +25,7 @@ public class LoginController {
 	public ResponseEntity Login(@RequestBody LoginVO loginVO) throws Exception {
 		HttpHeaders headers = new HttpHeaders();
 		headers.set("Content-Type", "application/json; charset=utf-8");
-		
+
 		// 로그인 성공 시 유저 이름 및 아이디 담아서 전달
 		UserVO userVO = new UserVO();
 
@@ -38,7 +38,7 @@ public class LoginController {
 			System.out.println(e);
 		}
 
-		// 로그인 성공 시 유저네임 가져오기 
+		// 로그인 성공 시 유저네임 가져오기
 		if (count == 1) {
 			System.out.println("login success!");
 			headers.set("responseMessage", "login success");
@@ -47,16 +47,16 @@ public class LoginController {
 			} catch (Exception e) {
 				System.out.println(e);
 			}
-			
+
 			// ok : status code 200
 			return ResponseEntity.ok().headers(headers).body(userVO);
 		}
-		
+
 		// 로그인 실패
 		else {
 			System.out.println("login fail~");
 			headers.set("responseMessage", "login fail");
-			
+
 			// unauthorized : status code 401
 			return ResponseEntity.status(HttpStatus.UNAUTHORIZED).headers(headers).build();
 		}
